@@ -1,24 +1,13 @@
 
 import { Route,BrowserRouter as Router,Routes } from 'react-router-dom'
 import './App.css'
-import Test from './views/index'
-import Home from './views/home'
+import RouteList from './router/index'
+import { useEffect } from 'react';
 
 function App() {
-  const RouteList = [
-    {
-      name: '首页',
-      path: '/',  
-      exact:true,
-      component:Home
-    },
-    {
-      name: 'Test',
-      path: '/test',  
-      exact:true,
-      component:Test
-    }
-  ]
+  useEffect(() => {
+    console.log("模拟componentDidMount，即只运行一次该函数");
+  }, [])
 
   return <div>
     <Router>
